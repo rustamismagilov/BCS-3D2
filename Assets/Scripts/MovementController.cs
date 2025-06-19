@@ -44,7 +44,7 @@ public class MovementController : MonoBehaviour
         {
             engineFlames.Stop();
             StartCoroutine(StartFade(shipSounds, 0.25f, 0));
-            shipSounds.Stop();
+            //shipSounds.Stop();
         }
         
         
@@ -82,7 +82,8 @@ public class MovementController : MonoBehaviour
             currentTime += Time.deltaTime;
             audioSource.volume = Mathf.Lerp(startVolume, targetVolume, currentTime / duration);
             yield return null;
-        }
+        } 
+        if(targetVolume == 0){shipSounds.Stop();}
         
     }
 }
