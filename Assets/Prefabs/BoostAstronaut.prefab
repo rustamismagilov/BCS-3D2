@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6875352855563859834
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 588225561580902931, guid: 830fe0d2c751244e8ab408bb0ffa2cde, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6478536213147159724, guid: d4384f274c2d74085a96665456fa3bc0, type: 3}
+    - target: {fileID: 3504705276566154039, guid: 830fe0d2c751244e8ab408bb0ffa2cde, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3504705276566154039, guid: 830fe0d2c751244e8ab408bb0ffa2cde, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3504705276566154039, guid: 830fe0d2c751244e8ab408bb0ffa2cde, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3504705276566154039, guid: 830fe0d2c751244e8ab408bb0ffa2cde, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.67597467
+      objectReference: {fileID: 0}
+    - target: {fileID: 3504705276566154039, guid: 830fe0d2c751244e8ab408bb0ffa2cde, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.20750497
+      objectReference: {fileID: 0}
+    - target: {fileID: 3504705276566154039, guid: 830fe0d2c751244e8ab408bb0ffa2cde, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.67597467
+      objectReference: {fileID: 0}
+    - target: {fileID: 3504705276566154039, guid: 830fe0d2c751244e8ab408bb0ffa2cde, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.20750497
+      objectReference: {fileID: 0}
+    - target: {fileID: 3504705276566154039, guid: 830fe0d2c751244e8ab408bb0ffa2cde, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -34.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3504705276566154039, guid: 830fe0d2c751244e8ab408bb0ffa2cde, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3504705276566154039, guid: 830fe0d2c751244e8ab408bb0ffa2cde, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316953464553468301, guid: 830fe0d2c751244e8ab408bb0ffa2cde, type: 3}
+      propertyPath: m_Name
+      value: BoostAstronaut
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 830fe0d2c751244e8ab408bb0ffa2cde, type: 3}

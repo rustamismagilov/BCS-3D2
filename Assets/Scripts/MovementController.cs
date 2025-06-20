@@ -6,14 +6,15 @@ public class MovementController : MonoBehaviour
     [SerializeField] private float verticalThrust = 100f;
     [SerializeField] private float rotationThrust = 1f;
     [SerializeField] private ParticleSystem engineFlames;
+    [SerializeField] private AudioClip engineSounds;
     private Rigidbody rb;
-    private AudioSource shipSounds;
+    private AudioSource shipAudio;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        shipSounds = GetComponent<AudioSource>();
+        shipAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,23 +29,23 @@ public class MovementController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W))
         {
             rb.AddRelativeForce(Vector3.up * verticalThrust * Time.deltaTime);
-            Debug.Log("Thrusters activated");
+            //Debug.Log("Thrusters activated");
             if (!engineFlames.isPlaying)
             {
                 engineFlames.Play();
             }
 
-            if (!shipSounds.isPlaying)
+            if (!shipAudio.isPlaying)
             {
-                StartCoroutine(StartFade(shipSounds, 0.25f, 1));
-                shipSounds.Play();
+                StartCoroutine(StartFade(shipAudio, 0.25f, 1));
+                shipAudio.PlayOneShot(engineSounds);
             }
         }
         else if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W))
         {
             engineFlames.Stop();
-            StartCoroutine(StartFade(shipSounds, 0.25f, 0));
-            //shipSounds.Stop();
+            StartCoroutine(StartFade(shipAudio, 0.25f, 0));
+            
         }
         
         
@@ -55,14 +56,14 @@ public class MovementController : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             ApplyRotation(rotationThrust);
-            Debug.Log("Left turn");
-            //engineFlames.Play();
+            //Debug.Log("Left turn");
+            
             
         } else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             ApplyRotation(-rotationThrust);
-            Debug.Log("Right turn");
-           //engineFlames.Play();
+            //Debug.Log("Right turn");
+           
         }
     }
 
@@ -83,7 +84,7 @@ public class MovementController : MonoBehaviour
             audioSource.volume = Mathf.Lerp(startVolume, targetVolume, currentTime / duration);
             yield return null;
         } 
-        if(targetVolume == 0){shipSounds.Stop();}
+        if(targetVolume == 0){audioSource.Stop();}
         
     }
 }
